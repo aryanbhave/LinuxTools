@@ -8,8 +8,8 @@ import sys
 
 def getArguments():
     parser = argparse.ArgumentParser()
-    parser.add_argument("-t1", "--target1", dest="targetIP1", help="Enter an IP Address to spoof.")
-    parser.add_argument("-t2", "--target2", dest="targetIP2", help="Enter a second IP to spoof.")
+    parser.add_argument("-t1", "--target1", dest="targetIP1", help="Enter an IP Address to spoof with the -t1 option.")
+    parser.add_argument("-t2", "--target2", dest="targetIP2", help="Enter a second IP Address to spoofwith the -t2 option.")
     (options) = parser.parse_args()
     return options
 
@@ -39,13 +39,13 @@ def packetLoop():
     try:
         targetMAC1 = getMAC(targetIP1)
     except:
-        print("[-] Please input a valid IP address for target 1.")
+        print("[-] Please input a valid IP address for target 1 with the -t1 option.")
         sys.exit()
 
     try:
         targetMAC2 = getMAC(targetIP2)
     except:
-        print("[-] Please input a valid IP address for target 2.")
+        print("[-] Please input a valid IP address for target 2 with the -t2 option.")
         sys.exit()
 
     while True:
@@ -57,8 +57,6 @@ def packetLoop():
 
 
 def main():
-    print("Make sure you enable IP forwarding with the command: \n")
-    print("echo 1 > /proc/sys/net/ipv4/ip_forward\n\n")
     booleanInput = input("Have you enabled IP forwarding? Input yes or no: ")
     if booleanInput == "y" or booleanInput == "yes":
         packetLoop()

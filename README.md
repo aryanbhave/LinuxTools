@@ -17,10 +17,11 @@ Python3
 ## Usage
 
 #### ARP Spoofer
-    (File Name: arpspoofer.py)
+   (File Name: arpspoofer.py)
     
-    Run the code with the terminal command:
+   Run the code with the terminal command:
     ```
     # python3 arpspoofer -t1 <target1> -t2 <target2>
+    ```
 ## End Goal
 The end goal of this project is to build a user-friendly Linux framework that can run all the individual tools in this repository.

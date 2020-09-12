@@ -10,7 +10,7 @@ Tools in this repository:
     - Use wireshark to view the packets being transferred between the two targets.
 #### 2. Network Scanner
 
-      - Retrieves the MAC address/addresses of an IP address or range of IP addresses.
+      - Retrieves the MAC address/addresses of an IP address or range of IP addresses that are up on a subnet.
     
 ## Requirements
 Kali Linux,

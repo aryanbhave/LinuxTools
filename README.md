@@ -19,4 +19,4 @@ Python3
     ```
     # python3 arpspoofer -t1 <target1> -t2 <target2>
 ## End Goal
-The end goal of this project is to build a user-friendly Linux framework which can run all the individual tools in this repository.
+The end goal of this project is to build a user-friendly Linux framework that can run all the individual tools in this repository.

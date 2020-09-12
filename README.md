@@ -4,7 +4,7 @@ This repo contains Linux tools that are useful to conduct scanning and enumerati
 
 Tools in this repository:
 
-1. [ARP Spoofer](####1.-[ARP-Spoofer])
+1. ARP Spoofer
       
     - Sends gratuitous ARP responses to two machines to act as a man in the middle which can intercept the flow of data between the two targets.
     - Use wireshark to view the packets being transferred between the two targets.

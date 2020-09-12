@@ -31,6 +31,6 @@ Python3
     # python3 networkscanner.py -t1 <targetIP>
     ```
     
-    You can also use CIDR notation and scan a range of IP addresses. Simply input the CIDR notation in the <targetIP> field.
+   You can also use CIDR notation and scan a range of IP addresses. Simply input the CIDR notation in the <targetIP> field.
 ## End Goal
 The end goal of this project is to build a user-friendly Linux framework that can run all the individual tools in this repository.

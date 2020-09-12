@@ -56,16 +56,24 @@ def packetLoop():
         time.sleep(2)
 
 
-print("Make sure you enable IP forwarding with the command: \n")
-print("echo 1 > /proc/sys/net/ipv4/ip_forward\n\n")
-booleanInput = input("Have you enabled IP forwarding? Input yes or no: ")
-if booleanInput == "y" or booleanInput == "yes":
-    packetLoop()
-elif booleanInput == "n" or booleanInput == "no":
-    enableIPforwarding()
-    print("[+] We have enabled IP forwarding for you.\n")
-    print("[+] The code will run in 5 seconds.")
-    time.sleep(5)
-    packetLoop()
-else:
-    print("Please provide a valid input.")
+def main():
+    print("Make sure you enable IP forwarding with the command: \n")
+    print("echo 1 > /proc/sys/net/ipv4/ip_forward\n\n")
+    booleanInput = input("Have you enabled IP forwarding? Input yes or no: ")
+    if booleanInput == "y" or booleanInput == "yes":
+        packetLoop()
+    elif booleanInput == "n" or booleanInput == "no":
+        enableIPforwarding()
+        print("[+] We have enabled IP forwarding for you.\n")
+        print("[+] The code will run in 5 seconds.")
+        time.sleep(5)
+        packetLoop()
+    else:
+        print("Please provide a valid input.")
+
+
+if __name__ == '__main__':
+    try:
+        main()
+    except KeyboardInterrupt:
+        sys.exit()

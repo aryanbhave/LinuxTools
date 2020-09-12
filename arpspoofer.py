@@ -66,8 +66,8 @@ def packetLoop(targetIP1, targetIP2):
 def restore(targetIP1, targetIP2, targetMAC1, targetMAC2):
     packet1 = scapy.ARP(op=2, pdst=targetIP1, hwdst=targetMAC1, psrc=targetIP2, hwsrc=targetMAC2)
     packet2 = scapy.ARP(op=2, pdst=targetIP2, hwdst=targetMAC2, psrc=targetIP1, hwsrc=targetMAC1)
-    scapy.send(packet1, verbose=False)
-    scapy.send(packet2, verbose=False)
+    scapy.send(packet1, count=4, verbose=False)
+    scapy.send(packet2, count=4, verbose=False)
 
 
 def main():

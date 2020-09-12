@@ -20,13 +20,13 @@ Python3
 
 #### 1. [ARP Spoofer](https://github.com/aryanbhave/LinuxTools/blob/master/arpspoofer.py)
     
-    Run the code with the terminal command:
+   Run the code with the terminal command:
     ```
     # python3 arpspoofer -t1 <target1> -t2 <target2>
     ```
 #### 2. [Network Scanner](https://github.com/aryanbhave/LinuxTools/blob/master/networkscanner.py)
 
-    Run the code with the terminal command:
+   Run the code with the terminal command:
     ```
     # python3 networkscanner.py -t1 <targetIP>
     ```

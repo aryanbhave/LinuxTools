@@ -3,7 +3,7 @@ Linux tools that are useful to conduct scanning and enumeration.
 
 Tools in this repository:
 
-1. ARP Spoofer(#####1.-ARP-spoofer) 
+1. ARP Spoofer(#1.-ARP-spoofer) 
       
       (File Name: arpspoofer.py)
     - Sends gratuitous ARP responses to two machines to act as a man in the middle which can intercept the flow of data between the two targets.

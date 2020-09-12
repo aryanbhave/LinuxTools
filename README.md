@@ -15,7 +15,7 @@ Python3
 
 ## Usage
 
-#### [1. ARP Spoofer] (https://github.com/aryanbhave/LinuxTools/blob/master/arpspoofer.py)
+#### 1. [ARP Spoofer](https://github.com/aryanbhave/LinuxTools/blob/master/arpspoofer.py)
     
    Run the code with the terminal command:
     ```

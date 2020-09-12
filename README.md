@@ -18,4 +18,5 @@ Python3
     Run the code with the terminal command:
     ```
     # python3 arpspoofer -t1 <target1> -t2 <target2>
-## Help
+## End Goal
+The end goal of this project is to build a user-friendly Linux framework which can run all the individual tools in this repository.

@@ -1,5 +1,6 @@
-# Linux Tools
-Linux tools that are useful to conduct scanning and enumeration.
+Linux Tools
+========================
+This repo contains Linux tools that are useful to conduct scanning and enumeration.
 
 Tools in this repository:
 

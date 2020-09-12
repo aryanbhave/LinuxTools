@@ -8,8 +8,8 @@ import sys
 
 def getArguments():
     parser = argparse.ArgumentParser()
-    parser.add_argument("-t1", "--target1", dest="targetIP1", help="Enter an IP Address to spoof with the -t1 option.")
-    parser.add_argument("-t2", "--target2", dest="targetIP2", help="Enter a second IP Address to spoofwith the -t2 option.")
+    parser.add_argument("-t1", "--target1", dest="targetIP1", help="Enter an IP Address to spoof.")
+    parser.add_argument("-t2", "--target2", dest="targetIP2", help="Enter a second IP Address to spoof.")
     (options) = parser.parse_args()
     return options
 

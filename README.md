@@ -1,4 +1,4 @@
-# Linux
+# LinuxTools
 Linux tools that are useful to conduct scanning and enumeration.
 
 Tools in this repository:

@@ -31,11 +31,7 @@ def enableIPforwarding():
     subprocess.call("echo 1 > /proc/sys/net/ipv4/ip_forward", shell=True)
 
 
-def packetLoop():
-    options = getArguments()
-    targetIP1 = options.targetIP1
-    targetIP2 = options.targetIP2
-
+def packetLoop(targetIP1, targetIP2):
     try:
         targetMAC1 = getMAC(targetIP1)
     except:
@@ -57,15 +53,19 @@ def packetLoop():
 
 
 def main():
+    options = getArguments()
+    targetIP1 = options.targetIP1
+    targetIP2 = options.targetIP2
+
     booleanInput = input("Have you enabled IP forwarding? Input yes or no: ")
     if booleanInput == "y" or booleanInput == "yes":
-        packetLoop()
+        packetLoop(targetIP1, targetIP2)
     elif booleanInput == "n" or booleanInput == "no":
         enableIPforwarding()
         print("[+] We have enabled IP forwarding for you.\n")
         print("[+] The code will run in 5 seconds.")
         time.sleep(5)
-        packetLoop()
+        packetLoop(targetIP1, targetIP2)
     else:
         print("Please provide a valid input.")
 

@@ -4,9 +4,8 @@ This repo contains Linux tools that are useful to conduct scanning and enumerati
 
 Tools in this repository:
 
-1. ARP Spoofer(####ARP-spoofer)
+1. ARP Spoofer
       
-      (File Name: arpspoofer.py)
     - Sends gratuitous ARP responses to two machines to act as a man in the middle which can intercept the flow of data between the two targets.
     - Use wireshark to view the packets being transferred between the two targets.
     
@@ -16,8 +15,7 @@ Python3
 
 ## Usage
 
-#### ARP Spoofer
-   (File Name: arpspoofer.py)
+#### 1. ARP Spoofer(https://github.com/aryanbhave/LinuxTools/blob/master/arpspoofer.py)
     
    Run the code with the terminal command:
     ```

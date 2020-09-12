@@ -2,6 +2,7 @@
 
 import scapy.all as scapy
 import argparse
+from scapy.layers import http
 
 
 def getArguments():
@@ -16,7 +17,8 @@ def sniffer(interface):
 
 
 def sniffPacket(packet):
-    print(packet)
+    if packet.haslayer(http.HTTPRequest):
+        print(packet)
 
 
 options = getArguments()

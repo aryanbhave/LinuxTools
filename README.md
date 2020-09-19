@@ -35,5 +35,6 @@ Python3
     ```
     
    You can also use CIDR notation and scan a range of IP addresses. Simply input the CIDR notation in the <targetIP> field.
+
 ## End Goal
 The end goal of this project is to build a user-friendly Linux framework that can run all the individual tools in this repository.
